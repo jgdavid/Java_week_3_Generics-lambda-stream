@@ -1,4 +1,4 @@
-package lanbdas;
+package com.qa.lambdas;
 
 public interface Calc {
 

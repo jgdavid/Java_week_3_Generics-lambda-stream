@@ -1,4 +1,4 @@
-package lanbdas;
+package com.qa.lambdas;
 
 public class lambda_main {
 
