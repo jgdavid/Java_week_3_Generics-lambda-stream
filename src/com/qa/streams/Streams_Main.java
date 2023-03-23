@@ -17,8 +17,12 @@ public class Streams_Main {
 
 		Optional<Integer> Max = nums.stream().reduce(Math::max);
 		Optional<Integer> Min = nums.stream().reduce(Math::min);
+		List<Integer> even = nums.stream().filter(x -> x % 2 == 0).collect(Collectors.toList());
+		List<Integer> odd = nums.stream().filter(x -> x % 2 == 1).collect(Collectors.toList());
 		System.out.println(Max);
 		System.out.println(Min);
+		System.out.println(odd);
+		System.out.println(even);
 
 	}
 
