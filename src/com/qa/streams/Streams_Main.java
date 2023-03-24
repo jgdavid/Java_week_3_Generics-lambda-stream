@@ -13,17 +13,24 @@ public class Streams_Main {
 		List<Integer> nums = List.of(3, 4, 7, 8, 12);
 
 		// Reduce method multiplies all the numbers
-		System.out.println(nums.stream().reduce(0, (a, b) -> a + b));
+		System.out.println(nums.stream().reduce(1, (a, b) -> a * b));
 
+		// Find the max of a
 		Optional<Integer> Max = nums.stream().reduce(Math::max);
+
 		Optional<Integer> Min = nums.stream().reduce(Math::min);
 		List<Integer> even = nums.stream().filter(x -> x % 2 == 0).collect(Collectors.toList());
 		List<Integer> odd = nums.stream().filter(x -> x % 2 == 1).collect(Collectors.toList());
 		System.out.println(Max);
-		System.out.println(Min);
-		System.out.println(odd);
-		System.out.println(even);
+//		System.out.println(Min);
+//		System.out.println(odd);
+//		System.out.println(even);
+		System.out.println(nums.stream().reduce(0, (a, b) -> a + b));
+		System.out.println(nums.stream().mapToInt(i -> i.intValue()).sum());
+
+		System.out.println(nums.stream().map(num -> num * num).filter(x -> x % 2 == 0).collect(Collectors.toList()));
+//				.forEach(num -> System.out.println(num * num).filter(x -> x % 2 == 0).collect(Collectors.toList()));
 
 	}
-
+//	.forEach(System.out::println)
 }
